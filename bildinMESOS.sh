@@ -37,9 +37,11 @@ make
 echo `date "${formatoH}"` ": Realizado Make" >> ../../LogMesos_${fechaLog}.txt
 
 make check
+echo "making check"
 
 echo `date "${formatoH}"` ": Realizado check" >> ../../LogMesos_${fechaLog}.txt
 
-make install
+sudo make install
+echo "Install end --"
 
 echo `date "${formatoH}"` ": Insalado" >> ../../LogMesos_${fechaLog}.txt
