@@ -28,17 +28,18 @@ echo "Buildin Dir Buil"
 mkdir build
 cd build
 sh ../configure
-echo `date "${formatoH}"` ": Finalizado configure" >> ../LogMesos_${fechaLog}.txt
+echo `date "${formatoH}"` ": Finalizado configure" >> ../../LogMesos_${fechaLog}.txt
 
 
 echo "making pakage"
+#con make -j 2 # para compilar con n procesodores
 make 
-echo `date "${formatoH}"` ": Realizado Make" >> ../LogMesos_${fechaLog}.txt
+echo `date "${formatoH}"` ": Realizado Make" >> ../../LogMesos_${fechaLog}.txt
 
 make check
 
-echo `date "${formatoH}"` ": Realizado check" >> ../LogMesos_${fechaLog}.txt
+echo `date "${formatoH}"` ": Realizado check" >> ../../LogMesos_${fechaLog}.txt
 
 make install
 
-echo `date "${formatoH}"` ": Insalado" >> ../LogMesos_${fechaLog}.txt
+echo `date "${formatoH}"` ": Insalado" >> ../../LogMesos_${fechaLog}.txt
