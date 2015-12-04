@@ -13,3 +13,8 @@ echo "Buildin Dir Buil"
 mkdir build
 cd build
 sh ../configure
+
+echo "making pakage"
+make 
+make check
+make install
