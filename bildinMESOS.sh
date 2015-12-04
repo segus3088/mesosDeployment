@@ -13,17 +13,32 @@ echo `date "${formatoH}"` ": iniciando Descarga" >> LogMesos_${fechaLog}.txt
 echo "iniciando Descarga"
 wget http://www.apache.org/dist/mesos/0.25.0/mesos-0.25.0.tar.gz
 
+echo `date "${formatoH}"` ": Finalizada la Descarga" >> LogMesos_${fechaLog}.txt
+
+
 echo "extrac pakage"
 tar -xzf mesos-*.tar.gz
 rm mesos-*.tar.gz ; mv mesos-* mesos
+
+echo `date "${formatoH}"` ": Extraido" >> LogMesos_${fechaLog}.txt
+
 cd mesos
 
 echo "Buildin Dir Buil"
 mkdir build
 cd build
 sh ../configure
+echo `date "${formatoH}"` ": Finalizado configure" >> ../LogMesos_${fechaLog}.txt
+
 
 echo "making pakage"
 make 
+echo `date "${formatoH}"` ": Realizado Make" >> ../LogMesos_${fechaLog}.txt
+
 make check
+
+echo `date "${formatoH}"` ": Realizado check" >> ../LogMesos_${fechaLog}.txt
+
 make install
+
+echo `date "${formatoH}"` ": Insalado" >> ../LogMesos_${fechaLog}.txt
