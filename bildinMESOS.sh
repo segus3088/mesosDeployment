@@ -2,7 +2,7 @@
 #Se busca para compilar MESOS
 
 echo "iniciando Descarga"
-wget http://www.apache.org/dist/mesos/0.21.0/mesos-0.21.0.tar.gz
+wget http://www.apache.org/dist/mesos/0.25.0/mesos-0.25.0.tar.gz
 
 echo "extrac pakage"
 tar –xzf mesos-*.tar.gz
