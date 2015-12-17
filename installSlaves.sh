@@ -13,5 +13,6 @@ read userToHost
 echo "Pass of user ${userToHost}"
 read passToHost
 
+
 scp *.sh $userToHost@$hostSlaveI:~
 ssh -t $userToHost@$hostSlaveI sh installRequirement.sh
