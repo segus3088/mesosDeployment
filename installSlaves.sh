@@ -8,7 +8,10 @@ read hostSlaveI
 
 echo "User to acces host ${hostSlaveI}"
 read userToHost
+#usuario para acceder
+
+echo "Pass of user ${userToHost}"
+read passToHost
 
 scp *.sh $userToHost@$hostSlaveI:~
-ssh $userToHost@$hostSlaveI
-sh installRequirement.sh
+ssh -t $userToHost@$hostSlaveI sh installRequirement.sh
