@@ -33,9 +33,11 @@ echo `date "${formatoH}"` ": Finalizado configure" >> ../../LogMesos_${fechaLog}
 
 echo "making pakage"
 #con make -j 2 # para compilar con n procesodores
-make 
+make -j 2
 echo `date "${formatoH}"` ": Realizado Make" >> ../../LogMesos_${fechaLog}.txt
 
+#Para poder colocar la contraseña sin tener que escribir 
+#expect
 make check
 echo "making check"
 

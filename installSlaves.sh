@@ -20,27 +20,30 @@ echo "Pass of user ${userToHost}"
 read passToHost
 
 
-#scp *.sh $userToHost@$hostSlaveI:~
+scp *.sh $userToHost@$hostSlaveI:~
 
 ssh -t $userToHost@$hostSlaveI 'sh installRequirement.sh'
 
+ssh -t $userToHost@$hostSlaveI 'sh bildinMESOS.sh'
 #Copiando la carpeta mesos ya compilada
-scp -r mesos $userToHost@$hostSlaveI:~
+#scp -r mesos $userToHost@$hostSlaveI:~
 
+
+## Metodo Anterior
 #Serie de comando que correran el sclavo 
-ssh -t $userToHost@$hostSlaveI << EOF
-cd mesos/build
+#ssh -t $userToHost@$hostSlaveI << EOF
+#cd mesos/build
 
-echo `date "${formatoH}"` ": Iniciando check" >> ../../LogMesos_${fechaLogSlave}.txt
-make check
-echo "making check"
+#echo `date "${formatoH}"` ": Iniciando check" >> ../../LogMesos_${fechaLogSlave}.txt
+#make check
+#echo "making check"
 
-echo `date "${formatoH}"` ": Realizado check" >> ../../LogMesos_${fechaLogSlave}.txt
+#echo `date "${formatoH}"` ": Realizado check" >> ../../LogMesos_${fechaLogSlave}.txt
 
-sudo make install
-echo "Install end --"
+#sudo make install
+#echo "Install end --"
 
-echo `date "${formatoH}"` ": Insalado" >> ../../LogMesos_${fechaLogSlave}.txt
-EOF
+#echo `date "${formatoH}"` ": Insalado" >> ../../LogMesos_${fechaLogSlave}.txt
+#EOF
 
 
