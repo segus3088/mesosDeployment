@@ -26,11 +26,13 @@ Este es un desarrollo de algunos Scripts para el Despliegue de Apache MESOS en s
 Se ejecutan de la siguente manera los scripts:
 
 * Maestro
-```sh
+
+```bash
 $ ./bildinMESOS.sh
 ```
 
 * Slaves
-```sh
+
+```bash
 $ ./installSlaves.sh
 ```
