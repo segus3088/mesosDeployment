@@ -11,7 +11,7 @@ touch LogMesos_${fechaLog}.txt
 echo `date "${formatoH}"` ": iniciando Descarga" >> LogMesos_${fechaLog}.txt
 
 echo "iniciando Descarga"
-wget http://www.apache.org/dist/mesos/0.25.0/mesos-0.25.0.tar.gz
+wget http://www.apache.org/dist/mesos/0.27.1/mesos-0.27.1.tar.gz
 
 echo `date "${formatoH}"` ": Finalizada la Descarga" >> LogMesos_${fechaLog}.txt
 

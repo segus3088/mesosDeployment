@@ -46,4 +46,5 @@ ssh -t $userToHost@$hostSlaveI 'sh bildinMESOS.sh'
 #echo `date "${formatoH}"` ": Insalado" >> ../../LogMesos_${fechaLogSlave}.txt
 #EOF
 
-
+#para que me cargue las librerias
+ldconfig
