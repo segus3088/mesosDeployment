@@ -27,12 +27,12 @@ Se ejecutan de la siguente manera los scripts:
 
 * Maestro
 
-```bash
+```console
 $ ./bildinMESOS.sh
 ```
 
 * Slaves
 
-```bash
+```console
 $ ./installSlaves.sh
 ```
