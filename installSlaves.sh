@@ -1,4 +1,5 @@
 #! /bin/bash
+#!/usr/bin/expect
 #Para compiar e instalar en los slaves
 #Se Compia la carpeta compilada de mesos
 
@@ -17,10 +18,14 @@ read userToHost
 #usuario para acceder
 
 echo "Pass of user ${userToHost}"
-read passToHost
+read -s passToHost
 
 
 scp *.sh $userToHost@$hostSlaveI:~
+
+expect expect "password: "
+
+send "${passToHost}\r"
 
 ssh -t $userToHost@$hostSlaveI 'sh installRequirement.sh'
 

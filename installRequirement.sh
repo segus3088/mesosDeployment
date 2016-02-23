@@ -10,4 +10,4 @@ sudo apt-get install -y openjdk-7-jdk
 sudo apt-get install -y autoconf libtool
 
 echo "Instalando las dependecias"
-sudo apt-get -y install build-essential python-dev python-boto libcurl4-nss-dev libsasl2-dev maven libapr1-dev libsvn-dev libz-dev libssl-dev python-pip libffi-dev
+sudo apt-get -y install build-essential python-dev python-boto libcurl4-nss-dev libsasl2-dev maven libapr1-dev libsvn-dev libz-dev libssl-dev python-pip libffi-dev expect
