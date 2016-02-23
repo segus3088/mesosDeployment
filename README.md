@@ -20,3 +20,17 @@ Este es un desarrollo de algunos Scripts para el Despliegue de Apache MESOS en s
 * RAM: 4GB
 * DELL OptiPlex 780
 * PROCESADOR: Intel(R) Core(TM)2 Duo CPU E8400  @ 3.00GHz
+
+### Procedimiento para usar
+
+Se ejecutan de la siguente manera los scripts:
+
+* Maestro
+```sh
+$ ./bildinMESOS.sh
+```
+
+* Slaves
+```sh
+$ ./installSlaves.sh
+```
