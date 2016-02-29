@@ -63,7 +63,7 @@ $ mesos-slave --master=<ip del master>:5050
 
 ## Pruebas
 
-Se accede por el navegador por medio de <code>http://<ip del maestro>:5050</code>, se puede observar la información de los recursos disponibles.
+Se accede por el navegador por medio de ``http://<ip del maestro>:5050``, se puede observar la información de los recursos disponibles.
 
 
 ### Test Frameworks
