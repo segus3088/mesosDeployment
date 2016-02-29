@@ -16,7 +16,7 @@ Este es un desarrollo de algunos Scripts para el Despliegue de Apache MESOS en s
 
 
 ## Características Host Pruebas Slave
-* UBUNTU 15.10 x86_64 
+* UBUNTU 14.10 x86_64 
 * RAM: 4GB
 * DELL OptiPlex 780
 * PROCESADOR: Intel(R) Core(TM)2 Duo CPU E8400  @ 3.00GHz
@@ -31,6 +31,7 @@ Antes de iniciar se instalan los requerimientos
 $ ./installRequirement.sh
 ```
 
+Los procesos de instalación del Maestro y los esclavos se pueden hacer en paralelo
 * Maestro
 
 ```console
@@ -41,4 +42,21 @@ $ ./buildMESOS.sh
 
 ```console
 $ ./installSlaves.sh
+```
+
+## Ejecución de mesos
+
+Se requiere que se ejecute primero el nodo Maestro y una vez este arriba se ejecuta cada uno de los nodos esclavos de la siguiente manera:
+
+### Ejecución Maestro
+
+```console
+$ sudo mesos-master --work_dir=/var/lib/mesos
+```
+Por defecto se ejecuta el maestro por el puerto 5050
+
+### Ejecución en esclavo
+
+```console
+$ mesos-slave --master=<ip del master>:5050
 ```

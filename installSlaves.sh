@@ -1,5 +1,5 @@
 #! /bin/bash
-#!/usr/bin/expect
+
 #Para compiar e instalar en los slaves
 #Se Compia la carpeta compilada de mesos
 
@@ -22,13 +22,21 @@ read -s passToHost
 
 #instalando llave 
 
+expect -c "
+			spawn ssh-copy-id -i ~/.ssh/id_rsa.pub $userToHost@$hostSlaveI
+			expect \"?assword:\"
+			send \"${passToHost}\r\"
+			expect eof"
 
-#spawn scp *.sh $userToHost@$hostSlaveI:~
+scp *.sh $userToHost@$hostSlaveI:~
 
+#scp *.sh $userToHost@$hostSlaveI:~
+		
 #expect "password: "
 
 #send "${passToHost}\r"
 
+#####
 ssh -t $userToHost@$hostSlaveI 'sh installRequirement.sh'
 
 ssh -t $userToHost@$hostSlaveI 'sh buildMESOS.sh'
