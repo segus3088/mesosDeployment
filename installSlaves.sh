@@ -23,7 +23,7 @@ read -s passToHost
 #instalando llave 
 
 expect -c "
-			spawn ssh-copy-id -i ~/.ssh/id_rsa.pub $userToHost@$hostSlaveI
+			spawn ssh-copy-id -i `~/.ssh/id_rsa.pub` $userToHost@$hostSlaveI
 			expect \"?assword:\"
 			send \"${passToHost}\r\"
 			expect eof"
