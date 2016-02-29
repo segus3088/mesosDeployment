@@ -28,7 +28,7 @@ Se ejecutan de la siguente manera los scripts:
 Antes de iniciar se instalan los requerimientos
 
 ```console
-$./installrRequirement.sh
+$ ./installRequirement.sh
 ```
 
 * Maestro
