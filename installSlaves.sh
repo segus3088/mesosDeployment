@@ -20,16 +20,18 @@ read userToHost
 echo "Pass of user ${userToHost}"
 read -s passToHost
 
+#instalando llave 
 
-scp *.sh $userToHost@$hostSlaveI:~
 
-expect expect "password: "
+#spawn scp *.sh $userToHost@$hostSlaveI:~
 
-send "${passToHost}\r"
+#expect "password: "
+
+#send "${passToHost}\r"
 
 ssh -t $userToHost@$hostSlaveI 'sh installRequirement.sh'
 
-ssh -t $userToHost@$hostSlaveI 'sh bildinMESOS.sh'
+ssh -t $userToHost@$hostSlaveI 'sh buildMESOS.sh'
 #Copiando la carpeta mesos ya compilada
 #scp -r mesos $userToHost@$hostSlaveI:~
 
@@ -50,6 +52,3 @@ ssh -t $userToHost@$hostSlaveI 'sh bildinMESOS.sh'
 
 #echo `date "${formatoH}"` ": Insalado" >> ../../LogMesos_${fechaLogSlave}.txt
 #EOF
-
-#para que me cargue las librerias
-ldconfig

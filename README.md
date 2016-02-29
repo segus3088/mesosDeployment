@@ -25,10 +25,16 @@ Este es un desarrollo de algunos Scripts para el Despliegue de Apache MESOS en s
 
 Se ejecutan de la siguente manera los scripts:
 
+Antes de iniciar se instalan los requerimientos
+
+```console
+$./installrRequirement.sh
+```
+
 * Maestro
 
 ```console
-$ ./bildinMESOS.sh
+$ ./buildMESOS.sh
 ```
 
 * Slaves
