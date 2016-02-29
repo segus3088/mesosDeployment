@@ -44,6 +44,9 @@ echo "making check"
 echo `date "${formatoH}"` ": Realizado check" >> ../../LogMesos_${fechaLog}.txt
 
 sudo make install
+
+#para que me cargue las librerias
+sudo ldconfig
 echo "Install end --"
 
 echo `date "${formatoH}"` ": Insalado" >> ../../LogMesos_${fechaLog}.txt
