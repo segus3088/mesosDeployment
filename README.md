@@ -46,7 +46,7 @@ $ ./installSlaves.sh
 
 ## Ejecución de mesos
 
-Se requiere que se ejecute primero el nodo Maestro y una vez este arriba se ejecuta cada uno de los nodos esclavos de la siguiente manera:
+Se requiere que se ejecute primero el nodo Maestro y una vez este arriba se ejecuta cada uno de los nodos esclavos
 
 ### Ejecución Maestro
 
@@ -60,3 +60,18 @@ Por defecto se ejecuta el maestro por el puerto 5050
 ```console
 $ mesos-slave --master=<ip del master>:5050
 ```
+
+## Pruebas
+
+Se accede por el navegador por medio de http://<ip del maestro>:5050, se puede observar la información de los recursos disponibles.
+
+
+### Test Frameworks
+
+Se accede a la carpeta ``mesos`` donde se encuentra los fuentes
+```console
+$ cd mesos
+$ ./src/test-framework --master=<ip del maestro>:5050
+```
+
+Después de ejecutar unas tareas se cierra y se puede ver en el web-ui lo que se ejecutó
